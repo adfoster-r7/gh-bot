@@ -8,7 +8,8 @@ pulls:
           - [Writing Module Documentation](https://github.com/rapid7/metasploit-framework/wiki/Writing-Module-Documentation)
           - [Template](https://github.com/rapid7/metasploit-framework/blob/master/documentation/modules/module_doc_template.md)
           - [Examples](https://github.com/rapid7/metasploit-framework/tree/master/documentation/modules)
-
+issues:
+  actions:
     termux:
       comment: >
         Termux is not officially supported. #11023
@@ -20,8 +21,6 @@ pulls:
         * https://wiki.termux.com/wiki/Metasploit_Framework
         * termux/termux-packages/issues/715
 
-issues:
-  actions:
     potato:
       close: true
       comment: >
