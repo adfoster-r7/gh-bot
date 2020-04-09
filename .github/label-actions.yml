@@ -19,6 +19,8 @@ pulls:
         * https://wiki.termux.com/wiki/Metasploit_Framework
         * termux/termux-packages/issues/715
 
+issues:
+  actions:
     potato:
       close: true
       comment: |
