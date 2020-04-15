@@ -1,10 +1,13 @@
-language: node_js
-node_js:
-  - "5"
+language: python
+
+python:
+
+  - "2.7"
 
 branches:
   only:
     - master
 
-notifications:
-  email: false
+script: 
+
+  - ls
