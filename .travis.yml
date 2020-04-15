@@ -10,4 +10,4 @@ branches:
 
 script: 
 
-  - python hello.py
+  - ls
