@@ -8,7 +8,7 @@ pulls:
     attic:
       close: true
       comment: |
-        Thanks for your interest in contributing to the Metasploit Framework! For now it seems that this pull request isn't quite ready to land, and we have opted to tag the pull request with the `attic` label.
+        Thanks for your interest in contributing to the Metasploit Framework! For now it seems that this pull request isn't quite ready to land, and we have opted to close and tag the pull request with the `attic` label.
 
         What does this generally mean?
         
