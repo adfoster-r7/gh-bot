@@ -59,19 +59,22 @@ pulls:
         # - https://github.com/rapid7/metasploit-framework/pulls        
         ```
 
-        This helps protect the process, ensure users are aware of commits on the branch being considered for merge, allows
-        for a location for more commits to be offered without mingling with other contributor changes and allows contributors
-        to make progress while a PR is still being reviewed.
+        This helps protect the process, ensure users are aware of commits on the branch being considered for merge, allows for a location for more commits to be offered without mingling with other contributor changes and allows contributors to make progress while a PR is still being reviewed.
 
         Please do resubmit from a unique branch, we greatly value your contribution! :tada:
 
     attic:
       close: true
-      comment: >
-        Thanks so much for your contribution! We agree this belongs in Framework, but some more work or input is needed to merge it.
-        Sometimes that means the implementation isn't quite right and a different approach is necessary. Sometimes it just means that
-        we or the contributor doesn't have the time or equipment necessary to test it or fix it up. Please feel free to resubmit if
-        you address all of the comments!      
+      comment: |
+        Thanks for your interest in contributing to the Metasploit Framework! For now it seems that this pull request isn't quite ready to land, and we have opted to tag the pull request with the `attic` label.
+
+        What does this generally mean?
+        
+        - It doesn't look like there's been any activity on this Pull Request in quite some time
+        - We or the contributor doesn't have the time or equipment necessary to test it or fix it up
+        - Sometimes the implementation isn't quite right and a different approach is necessary
+        
+        We would love to land this pull request when it's ready. If you have a chance to address the comments, we'd be happy to reopen and discuss merging this contribution into the framework.
 
 issues:
   actions:
