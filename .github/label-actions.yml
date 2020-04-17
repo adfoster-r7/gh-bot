@@ -15,9 +15,7 @@ pulls:
 
     needs-linting:
       comment: |
-        Thanks for your pull request! We currently use Rubocop and msftidy to ensure the quality of our code.
-        
-        This can be ran from the root directory of Metasploit:
+        Thanks for your pull request! We currently use Rubocop and msftidy to ensure the quality of our code. This can be ran from the root directory of Metasploit:
         
         ```
         rubocop <directory or file>
