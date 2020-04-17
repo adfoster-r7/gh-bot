@@ -28,20 +28,22 @@ pulls:
 
     needs-linting:
       comment: |
-        Thanks for your pull request! We currently use Rubocop and msftidy to ensure the quality of our code. This can be ran from the root directory of Metasploit:
+        Thanks for your pull request!
+        
+        We use Rubocop and msftidy to ensure the quality of our code. This can be ran from the root directory of Metasploit:
         
         ```
         rubocop <directory or file>
         tools/dev/msftidy.rb <directory or file>
         ```
         
-        It's also possible to automate some of these changes with the `-a` flag:
+        You can automate most of these changes with the `-a` flag:
         
         ```
         rubocop -a <directory or file>
         ```
         
-        After making these changes, push to your branch again once all issues have been resolved.
+        Please update your branch with these changes, and reach out if you have any problems
 
     needs-unique-branch:
       close: true    
@@ -82,7 +84,7 @@ pulls:
         
         However in this case we are unable to test this module successfully, either due to software or hardware requirements that we can not replicate.
         
-        This is different for each pull request, but to help unblock this pull request, please 
+        This is different for each pull request, but to help unblock this pull request, please:
 
         - Comment with links to documentation on how to set up an environment, and provide exact software version numbers to use
         - Or comment guided steps on how to set up our environment for testing this module
