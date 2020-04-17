@@ -7,12 +7,29 @@ pulls:
   actions:
     needs-docs:
       comment: |
-        Thanks for your pull request, before this can be merged - corresponding documentation for your module is required:
+        Thanks for your pull request! Before this can be merged, we need the following documentation for your module:
 
         - [Writing Module Documentation](https://github.com/rapid7/metasploit-framework/wiki/Writing-Module-Documentation)
         - [Template](https://github.com/rapid7/metasploit-framework/blob/master/documentation/modules/module_doc_template.md)
         - [Examples](https://github.com/rapid7/metasploit-framework/tree/master/documentation/modules)
 
+    needs-linting:
+      comment: |
+        Before this can be merged our automated linting tools will need to pass. These tools will catch stylistic and programmatic errors, which helps ensures the consistency and quality of our modules.
+
+        We currently use Rubocop and msftidy to ensure the quality of our code. This can be ran from the root directory of Metasploit:
+        
+        ```
+        rubocop <directory or file>
+        tools/dev/msftidy.rb <directory or file>
+        ```
+        
+        It's also possible to automate some of these changes with the `-a` flag:
+        
+        ```
+        rubocop -a <directory or file>
+        ```
+        
 issues:
   actions:
     termux:
