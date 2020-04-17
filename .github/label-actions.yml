@@ -15,9 +15,9 @@ pulls:
 
     needs-linting:
       comment: |
-        Before this can be merged our automated linting tools will need to pass. These tools will catch stylistic and programmatic errors, which helps ensures the consistency and quality of our modules.
-
-        We currently use Rubocop and msftidy to ensure the quality of our code. This can be ran from the root directory of Metasploit:
+        Thanks for your pull request! We currently use Rubocop and msftidy to ensure the quality of our code.
+        
+        This can be ran from the root directory of Metasploit:
         
         ```
         rubocop <directory or file>
