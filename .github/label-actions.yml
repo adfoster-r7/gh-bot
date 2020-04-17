@@ -27,6 +27,8 @@ pulls:
         ```
         rubocop -a <directory or file>
         ```
+        
+        After making these changes, push to your branch again once all issues have been resolved.
 
     needs-unique-branch:
       close: true    
