@@ -5,6 +5,19 @@
 #   - https://github.com/dessant/label-actions/issues/1
 pulls:
   actions:
+    attic:
+      close: true
+      comment: |
+        Thanks for your interest in contributing to the Metasploit Framework! For now it seems that this pull request isn't quite ready to land, and we have opted to tag the pull request with the `attic` label.
+
+        What does this generally mean?
+        
+        - It doesn't look like there's been any activity on this Pull Request in quite some time
+        - We or the contributor doesn't have the time or equipment necessary to test it or fix it up
+        - Sometimes the implementation isn't quite right and a different approach is necessary
+        
+        We would love to land this pull request when it's ready. If you have a chance to address the comments, we'd be happy to reopen and discuss merging this contribution into the framework! :tada:
+        
     needs-docs:
       comment: |
         Thanks for your pull request! Before this can be merged, we need the following documentation for your module:
@@ -63,18 +76,19 @@ pulls:
 
         Please do resubmit from a unique branch, we greatly value your contribution! :tada:
 
-    attic:
-      close: true
+    needs-testing-environment:
       comment: |
-        Thanks for your interest in contributing to the Metasploit Framework! For now it seems that this pull request isn't quite ready to land, and we have opted to tag the pull request with the `attic` label.
+        Thanks for your pull request! As part of our landing process, we manually verify that all modules work as expected.
+        
+        However in this case we are unable to test this module successfully, either due to software or hardware requirements that we can not replicate.
+        
+        This is different for each pull request, but to help us you can:
 
-        What does this generally mean?
-        
-        - It doesn't look like there's been any activity on this Pull Request in quite some time
-        - We or the contributor doesn't have the time or equipment necessary to test it or fix it up
-        - Sometimes the implementation isn't quite right and a different approach is necessary
-        
-        We would love to land this pull request when it's ready. If you have a chance to address the comments, we'd be happy to reopen and discuss merging this contribution into the framework.
+        - Provide links to documentation with exact software version numbers
+        - Provide guided steps on how to set up our environment for testing this module
+        - Send a pcap and screenshots/recordings of it working and logging in as a new user - you can email us msfdev[at]rapid7.com
+
+        Once there's a clear path for testing and evaluating this module, we can progress with this further.
 
 issues:
   actions:
