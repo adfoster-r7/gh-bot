@@ -28,7 +28,7 @@ pulls:
 
     needs-linting:
       comment: |
-        Thanks for your pull request!
+        Thanks for your pull request! Before this pull request can be merged, it must pass the checks of our automated linting tools.
         
         We use Rubocop and msftidy to ensure the quality of our code. This can be ran from the root directory of Metasploit:
         
@@ -43,7 +43,7 @@ pulls:
         rubocop -a <directory or file>
         ```
         
-        Please update your branch with these changes, and reach out if you have any problems
+        Please update your branch after these have been made, and reach out if you have any problems.
 
     needs-unique-branch:
       close: true    
