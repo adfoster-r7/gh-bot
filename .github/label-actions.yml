@@ -8,16 +8,18 @@ pulls:
     attic:
       close: true
       comment: |
-        Thanks for your interest in contributing to the Metasploit Framework! For now it seems that this pull request isn't quite ready to land, and we have opted to close and tag the pull request with the `attic` label.
+        Tiny changes, don't keel me! 
 
-        What does this generally mean?
-        
-        - It doesn't look like there's been any activity on this Pull Request in quite some time
-        - We or the contributor doesn't have the time or equipment necessary to test it or fix it up
-        - Sometimes the implementation isn't quite right and a different approach is necessary
-        
-        We would love to land this pull request when it's ready. If you have a chance to address the comments, we'd be happy to reopen and discuss merging this contribution into the framework! :tada:
-        
+        Thanks for your contribution to Metasploit Framework! We've looked at this pull request, and we agree that it seems like a good addition to Metasploit, but it looks like it is not quite ready to land. We've labeled it `attic` and closed it for now. 
+
+        What does this generally mean? It could be one or more of several things:
+
+        - It doesn't look like there has been any activity on this pull request in a while
+        - We may not have the proper access or equipment to test this pull request, or the contributor doesn't have time to work on it right now.
+        - Sometimes the implementation isn't quite right and a different approach is necessary.
+
+        We would love to land this pull request when it's ready. If you have a chance to address all comments, we would be happy to reopen and discuss how to merge this!
+
     needs-docs:
       comment: |
         Thanks for your pull request! Before this can be merged, we need the following documentation for your module:
