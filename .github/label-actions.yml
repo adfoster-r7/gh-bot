@@ -8,8 +8,6 @@ pulls:
     attic:
       close: true
       comment: |
-        Tiny changes, don't keel me! 
-
         Thanks for your contribution to Metasploit Framework! We've looked at this pull request, and we agree that it seems like a good addition to Metasploit, but it looks like it is not quite ready to land. We've labeled it `attic` and closed it for now. 
 
         What does this generally mean? It could be one or more of several things:
@@ -84,13 +82,13 @@ pulls:
       comment: |
         Thanks for your pull request! As part of our landing process, we manually verify that all modules work as expected.
         
-        However in this case we are unable to test this module successfully, either due to software or hardware requirements that we can not replicate.
-        
-        This is different for each pull request, but to help unblock this pull request, please:
+        We have been unable to test this module successfully. This may be due to software or hardware requirements we cannot replicate.
+
+        To help unblock this pull request, please:
 
         - Comment with links to documentation on how to set up an environment, and provide exact software version numbers to use
         - Or comment guided steps on how to set up our environment for testing this module
-        - Or send pcaps/screenshots/recordings of it working and logging in as a new user - you can email us msfdev[at]rapid7.com
+        - Or send pcaps/screenshots/recordings of it working - you can email us msfdev[at]rapid7.com
 
         Once there's a clear path for testing and evaluating this module, we can progress with this further.
 
