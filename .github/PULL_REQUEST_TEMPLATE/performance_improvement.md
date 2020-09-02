@@ -1,3 +1,9 @@
+---
+name: New / Updated Module 📦
+about: Adding a new module, or updating an existing module?
+labels: "improvement"
+---
+
 
 Tell us what this change does. If you're fixing a bug, please mention
 the github issue number.
