@@ -11,3 +11,4 @@ branches:
 script: 
 
   - ls
+  - ls
