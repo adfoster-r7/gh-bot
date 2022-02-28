@@ -124,6 +124,13 @@ jobs:
                 },
               },
               issues: {
+                // Todo: Add description
+                'raise-a-new-issue-please': {
+                  lock: true,
+                  comment: `
+                    please raise a new issue etc etc, more descriptive text here.
+                  `
+                },
                 // Termux issues are usually user error. However they may describe issues within modules/framework itself,
                 // and for this reason they are not closed automatically.
                 termux: {
@@ -214,5 +221,12 @@ jobs:
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   state: 'closed'
+              });
+            }
+            if (config.lock) {
+              await github.issues.lock({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
               });
             }
