@@ -1,9 +1,28 @@
 name: Labels
+
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
+permissions:
+  actions: none
+  checks: none
+  contents: none
+  deployments: none
+  id-token: none
+  # This action can update/close issues
+  issues: write
+  discussions: none
+  packages: none
+  pages: none
+  # This action can update/close pull requests
+  pull-requests: write
+  repository-projects: none
+  security-events: none
+  statuses: none
+
 on:
   pull_request_target:
     types: [labeled]
   issues:
-     types: [labeled]
+    types: [labeled]
 
 jobs:
   handle-labels:
@@ -17,10 +36,10 @@ jobs:
             // the multiline comment strings in the following config. When editing this file, using JavaScript
             // syntax highlighting might be easier.
             //
-            // This script has intentionally been inlined instead of using third-party Github actions for
-            // performance + security reasons.
+            // This script has intentionally been inlined instead of using third-party Github actions for both
+            // security and performance reasons.
             const allConfig = {
-              pull_requests: {
+              pullRequests: {
                 attic: {
                   close: true,
                   comment: `
@@ -124,26 +143,12 @@ jobs:
                 },
               },
               issues: {
-                // Todo: Add description
-                'raise-a-new-issue-please': {
-                  lock: true,
-                  comment: `
-                    please raise a new issue etc etc, more descriptive text here.
-                  `
-                },
-                // Termux issues are usually user error. However they may describe issues within modules/framework itself,
-                // and for this reason they are not closed automatically.
                 termux: {
-                  close: false,
+                  close: true,
                   comment: `
-                    Termux is not officially supported. https://github.com/rapid7/metasploit-framework/issues/11023
+                    Metasploit installation on Termux is not supported. Refer to the following for more information:
 
-                    However, Metasploit reportedly does work with Termux.
-
-                    Refer to the following for more information:
-
-                    * https://wiki.termux.com/wiki/Metasploit_Framework
-                    * termux/termux-packages/issues/715
+                    * https://github.com/rapid7/metasploit-framework/issues/11023
                   `
                 },
                 // Used for issues that have had low effort applied, haven't followed the issue template, and there's not enough
@@ -178,7 +183,7 @@ jobs:
                 // Used for issues that have zero effort applied, potentially bot related
                 // https://github.com/rapid7/metasploit-framework/pull/13280#issuecomment-616842090
                 potato: {
-                  close: false,
+                  close: true,
                   comment: `
                     When creating an issue, please ensure that the default issue template has been updated with the required details:
                     https://github.com/rapid7/metasploit-framework/issues/new/choose
@@ -186,20 +191,10 @@ jobs:
                     Closing this issue. If you believe this issue has been closed in error, please provide any relevant output and logs which may be useful in diagnosing the issue.
                   `
                 },
-                'ruby-3.0.0': {
-                  close: false,
-                  comment: `
-                  This issue appears to be related to Ruby 3.0.0. At this time Metasploit does not support Ruby 3.0.0.
-                  Please try using Ruby 2.7.x with Metasploit.
-
-                  Closing this issue as a duplicate of #14666 - which aims to track this feature request.
-                  `
-                },
               }
             };
 
-            const issueType = context.eventName === 'issues' ? 'issues' : 'pull_requests';
-
+            const issueType = context.eventName === 'issues' ? 'issues' : 'pullRequests';
             const config = allConfig[issueType][context.payload.label.name];
             if (!config) {
               return;
@@ -221,12 +216,5 @@ jobs:
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   state: 'closed'
-              });
-            }
-            if (config.lock) {
-              await github.issues.lock({
-                  issue_number: context.issue.number,
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
               });
             }
